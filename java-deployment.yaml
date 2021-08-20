@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: java-deployment
   labels:
     env: dev
 spec:
@@ -15,7 +15,7 @@ spec:
         env: dev
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: java-deployment
+        image: shk2123/tenant:1.0.0
         ports:
-        - containerPort: 80
+        - containerPort: 8081
